@@ -25,7 +25,7 @@ public abstract class A {
         return varA1;
     }
 
-    public int foo(Date date) {
+    public int foo(Date dt) {
         return 0;
     }
 
