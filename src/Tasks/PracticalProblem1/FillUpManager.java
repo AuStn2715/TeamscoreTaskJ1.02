@@ -2,12 +2,13 @@ package Tasks.PracticalProblem1;
 import java.util.Random;
 public class FillUpManager {
     public static void fill (String[][] nomenclature) {
+
         var rnd = new Random(0);
-        for (int i = 0; i<15; i++) {
-            nomenclature[i][0] = Long.toString(10000_00000L + (long)i); // согласно условию тут 10-15цифр, правда числа по порядку
-            nomenclature[i][2] = Integer.toString(rnd.nextInt(100) * 100);
+        for (int i = 1; i < nomenclature.length; i++) {
+            nomenclature[i][0] = Long.toString(1000000000L + (long)i); // артикулы
+            nomenclature[i][2] = Integer.toString(rnd.nextInt(1000) * 100); // цены в копейках
         }
-        nomenclature[1][1] = "Красный кирпич";
+        nomenclature[1][1] = "Красный кирпич"; // наименования товаров
         nomenclature[2][1] = "Серый кирпич";
         nomenclature[3][1] = "Красивый кирпич";
         nomenclature[4][1] = "Мраморная плита";
@@ -23,10 +24,22 @@ public class FillUpManager {
         nomenclature[14][1] = "Сталь 15";
         nomenclature[15][1] = "Сталь 45";
 
-        var producer1 = new Producer(100000000,"Ленина 17", "РОСКИРПИЧ");
-        var producer2 = new Producer(100000001,"Масленникова 4", "ЗИМ");
-        var producer3 = new Producer(100000002,"Московское шоссе 118", "СТЗ");
-        var diller1 = new Diller(1000000003, "Ухабово 71", "Кубатура", producer1);
-        var diller2 = new Diller(1000000004, "Сырово 4", "Сталь.ин", producer2);
+        nomenclature[1][3] = "1000000000"; // ИНН поставщика
+        nomenclature[2][3] = "1000000000";
+        nomenclature[3][3] = "1000000003";
+        nomenclature[4][3] = "1000000003";
+        nomenclature[5][3] = "1000000002";
+        nomenclature[6][3] = "1000000002";
+        nomenclature[7][3] = "1000000001";
+        nomenclature[8][3] = "1000000001";
+        nomenclature[9][3] = "1000000002";
+        nomenclature[10][3] = "1000000002";
+        nomenclature[11][3] = "1000000004";
+        nomenclature[12][3] = "1000000004";
+        nomenclature[13][3] = "1000000004";
+        nomenclature[14][3] = "1000000004";
+        nomenclature[15][3] = "1000000004";
+
+
     }
 }
